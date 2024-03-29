@@ -1,33 +1,31 @@
 import "./App.css";
 import AppName from "./components/AppName"
 import AddTodo from "./components/AddTodo"
-import TodoItem1 from "./components/TodoItem1"
-import TodoItem2 from "./components/TodoItem2"
-
-import Clockhead from "./components/Clockhead";
-import Clockslogan from "./components/Clockslogan";
-import Clockdisplay from "./components/Clockdisplay";
+import TodoItemMap from "./components/TodoItemMap";
 
 
 function App() {
-  
-
+  const todoList = [{
+    name : "buy milk",
+    dueDate : "21/01/96"
+    },
+    {
+      name: "Go to college",
+      dueDate: "03/03/24"
+    },
+    {
+      name: "Study",
+      
+    }
+  ]
   return (
     <>
       {/* TODO Ui from here */}
       <center className="todo-container">
 
         <AppName/>
-        <AddTodo/>  
-        <TodoItem1/>
-        <TodoItem2/>
-        
-      {/* Bharat Clock from here */}
-      <Clockhead/>
-      <Clockslogan/>
-      <Clockdisplay/>
-
-      
+        <AddTodo/>
+        <TodoItemMap todoData={todoList}></TodoItemMap>
       </center>
     </>  
   )
