@@ -1,0 +1,76 @@
+ .container-body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background:linear-gradient(90deg, #BBD2C5, #536976, #292E49); */
+    background:linear-gradient(90deg, #bdc3c7, #2c3e50);
+    display:flex;
+    
+ }
+
+ /* h1 Not woeking check out why */
+ /* h1 {
+    font-weight: 900;
+ } */
+
+.calculator-container {
+    color: #05283d;
+    /* position:absolute; */
+    width: 200px;
+    margin: auto;
+    /* top: 50%; */
+    /* margin-top: 50%; */
+    /* align-items: center; */
+    border-radius: 8px;
+    /* background-color: rgb(117, 137, 182); */
+    background-color: #536976;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.4) ;
+
+    /* another way to center the div */
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+input {
+    max-width: 100%;
+    border-radius: 8px;
+    border: 1px solid black;
+    height: 40px;
+}
+
+.button-container {
+    color: #05283d;
+    max-width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    /* justify-content:  ; */
+    /* align-content: flex-start; */
+    margin:8px;
+
+    
+}
+
+button {
+    /* color: #05283d; */
+    /* height:40px; */
+    /* width: 40px; */
+    /* margin-right: 2px; */
+    /* padding:10px; */
+
+}
+.dj-btn {
+    color: #05283d;
+    margin: 2px;
+    height: 40px;
+    width: 41px;
+    border-radius:8px;
+    border: 1px solid black;
+}
+
+.dj-btn:hover {
+    box-shadow:2px 1px #05283d;
+    transition: 0.4s;
+    background-color: #d0d5d8;
+}

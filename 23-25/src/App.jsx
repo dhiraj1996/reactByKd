@@ -12,9 +12,7 @@ function App() {
 
   // let foodItems = ["Dal","Rice","Vegetable Curry", "Samosa", "Pizza"];
   // let foodItems = [];
-  let [foodItems , setFoodItems] = useState([
-    // "Palak", "Bread", "Suji"
-  ])
+  
 
   // let [textToShow, setTextToShow] = useState("hello");
   // let text = textToShow[0];
@@ -27,7 +25,8 @@ function App() {
   //   // console.log(e.target.value);
   //   setTextToShow(e.target.value);
   // }
-
+  
+  let [foodItems , setFoodItems] = useState([])
   const handleOnKeyDown = (event) => {
     if (event.key === "Enter") {
       console.log(event.target.value)

@@ -6,7 +6,7 @@ function ErrorMessage({ list }) {
     return (
         <>
             {/* {checkFood} */}
-            {list.length === 0 && <h2>No food left</h2>}
+            {list.length === 0 && <h2 className="text-center text-warning-emphasis">No food item</h2>}
         </>
 
     );
