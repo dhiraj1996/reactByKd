@@ -1,0 +1,15 @@
+.dj-item {
+    background-color: burlywood;
+}
+
+.dj-span {
+    color:brown;
+}
+
+.button {
+    float: right;
+}
+
+/* .button:active {
+    background-color: rgb(2, 2, 26);
+} */
