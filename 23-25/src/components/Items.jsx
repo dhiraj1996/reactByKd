@@ -1,9 +1,6 @@
 import styles from "./Items.module.css"
 
 function Items({foodList, handleButtonOnClick, bought }) {
-  // const handleButtonOnClick = ()=> {
-  //   console.log(`${foodList} is the item`);
-  // }
 
   return (
     <>
