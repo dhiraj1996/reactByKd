@@ -1,16 +1,36 @@
-import "../App.css"
+import "../App.css";
 
-function Buttons() {
-    const btnData = ["1", "2","3","+","4","5","6","-","7","8","9","x","0",".","=","/"]
+function Buttons({handleButton}) {
+  const btnData = [
+    "1",
+    "2",
+    "3",
+    "+",
+    "4",
+    "5",
+    "6",
+    "-",
+    "7",
+    "8",
+    "9",
+    "*",
+    "C",
+    "0",
+    "=",
+    "/",
+  ];
   return (
     <>
-        {btnData.map((item) => 
-        <button type="button" 
-        className="bbtn btn-secondary btn-lg dj-btn">{item}
-        </button>
-        )}
+      <div className="button-container">
+        {btnData.map((item, index) => (
+          <button type="button" key={index} className="bbtn btn-secondary btn-lg dj-btn"
+          onClick={()=>handleButton(item)}>
+            {item}
+          </button>
+        ))}
+      </div>
     </>
-  )
+  );
 }
 
 export default Buttons;
