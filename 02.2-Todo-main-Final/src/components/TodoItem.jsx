@@ -1,4 +1,4 @@
-function TodoItem({ todoName, todoDate = "not defined" }) {
+function TodoItem({ todoName, todoDate, handleDelete }) {
   return (
       <div className="container text-start">
             
@@ -6,7 +6,8 @@ function TodoItem({ todoName, todoDate = "not defined" }) {
             <div className="col-6">{todoName}</div>
             <div className="col-4">{todoDate}</div>
             <div className="col-2">
-            <button type="button" className="btn btn-outline-danger dj-button">Delete</button>
+            <button type="button" className="btn btn-outline-danger dj-button" 
+            onClick={()=>handleDelete(todoName)}>Delete</button>
             </div>
           </div>
   

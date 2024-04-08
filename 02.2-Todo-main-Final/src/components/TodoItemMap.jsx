@@ -1,10 +1,13 @@
 import TodoItem from "./TodoItem"
 
-function TodoItemMap({ todoData }) {
+function TodoItemMap({ todoData, handleDelete }) {
     return (
         <>
-            {todoData.map((list) =>
-                <TodoItem todoName={list.name} todoDate={list.dueDate}>
+            {todoData.map((list, index) =>
+                <TodoItem key={index}
+                todoName={list.name} 
+                todoDate={list.dueDate} 
+                handleDelete={handleDelete}>
                 </TodoItem>
             )}
         </>
