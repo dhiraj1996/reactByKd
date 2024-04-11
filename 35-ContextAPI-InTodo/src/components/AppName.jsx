@@ -2,7 +2,7 @@
 
 function AppName() {
   return (
-    <h1>Todo App using UseRef</h1>
+    <h1>Todo App in ContextAPI</h1>
   )
 }
 
