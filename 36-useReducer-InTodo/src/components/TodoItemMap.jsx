@@ -16,7 +16,7 @@ function TodoItemMap() {
         <TodoItem
           key={index}
           todoName={list.name}
-          todoDate={list.dueDate}
+          todoDate={list.date}
         ></TodoItem>
       ))}
     </>

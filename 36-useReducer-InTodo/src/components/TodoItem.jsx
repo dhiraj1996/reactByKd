@@ -1,10 +1,6 @@
 import { useContext } from "react";
 import { TodoItemsContext } from "../store/todo-item-store";
 
-
-
-
-
 function TodoItem({ todoName, todoDate }) {
 
   const { deleteItem } = useContext(TodoItemsContext)
