@@ -9,3 +9,13 @@
 .sidebar {
     min-height: 640px;
 }
+
+.post-card {
+    margin: 16px 16px;
+    display: flex;
+}
+
+.tag-but {
+    margin: 0 4px;
+    gap: 40px;
+}
