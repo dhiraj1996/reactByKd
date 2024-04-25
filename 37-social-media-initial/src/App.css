@@ -12,10 +12,18 @@
 
 .post-card {
     margin: 16px 16px;
-    display: flex;
+    /* display: flex; */
+    height: 700px;
 }
 
 .tag-but {
     margin: 0 4px;
-    gap: 40px;
+}
+
+.create-post {
+    margin:36px 10% 0 10%;
+}
+
+textarea {
+    resize: none;
 }
