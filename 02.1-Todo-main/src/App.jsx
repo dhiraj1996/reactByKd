@@ -3,6 +3,8 @@ import AppName from "./components/AppName"
 import AddTodo from "./components/AddTodo"
 import TodoItemMap from "./components/TodoItemMap";
 
+// Only todo UI, 
+// Hard coded datas are given functionality are not working in this project.
 
 function App() {
   const todoList = [{

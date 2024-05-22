@@ -7,12 +7,13 @@ import CreatePost from "./components/CreatePost"
 import PostList from "./components/PostList"
 import { useState } from "react"
 import PostListProvider from "./store/post-list-store"
+import HomePage from "./components/HomePage"
 
 
 
 function App() {
 
-  const [selectedTab, setSelectedTab] = useState("Post L")
+  const [selectedTab, setSelectedTab] = useState("Home")
 
   return (
     <>
@@ -21,7 +22,11 @@ function App() {
     <Sidebar selectedTab={selectedTab} setSelectedTab={setSelectedTab}></Sidebar>
       <div className="content">
       <Header></Header>
-      {selectedTab === "Post List" ? <PostList></PostList> : <CreatePost></CreatePost>}
+      
+      {/* {selectedTab === "HomePage" ? <HomePage></HomePage>: <PostList></PostList>}
+      {selectedTab === "Post List" ? <PostList></PostList> : <CreatePost></CreatePost>} */}
+      {selectedTab === "Home" ? <HomePage></HomePage>: selectedTab === "Post List" ? <PostList></PostList> : <CreatePost></CreatePost>}
+
       <Footer></Footer>
       </div>
     </div>
