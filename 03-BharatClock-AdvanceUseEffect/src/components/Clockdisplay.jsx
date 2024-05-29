@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 function Clockdisplay() {
+  
     const [time, setTime] = useState(new Date());
 
     useEffect(()=>{
