@@ -37,7 +37,7 @@ function Post({ post }) {
         Total reaction in this post       
             <span className="badge text-bg-success reaction">
               <AiOutlineLike />
-              {post.reactions}
+              {post.reactions.likes}
             </span>
         </div>
         </div>
