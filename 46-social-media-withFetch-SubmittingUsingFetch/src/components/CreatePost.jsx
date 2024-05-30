@@ -4,37 +4,51 @@ import { useContext, useRef } from "react";
 import { PostList } from "../store/post-list-store";
 
 function CreatePost() {
+  const { addPost } = useContext(PostList);
 
-  const{ addPost } = useContext(PostList)
+  const userIdData = useRef();
+  const titleData = useRef();
+  const bodyData = useRef();
+  const reactionData = useRef();
+  const tagData = useRef();
 
-  const userIdData = useRef()
-  const titleData = useRef()
-  const bodyData = useRef()
-  const reactionData = useRef()
-  const tagData = useRef()
-
-  const handleSubmit= (event)=> {
+  const handleSubmit = (event) => {
     event.preventDefault;
     const userId = userIdData.current.value;
     const postTitle = titleData.current.value;
     const postBody = bodyData.current.value;
     const reactions = reactionData.current.value;
-    const tags = tagData.current.value.split("#");
+    const tags = tagData.current.value.split(" ");
 
-    addPost(userId, postTitle, postBody, reactions, tags);
+    
 
     userIdData.current.value = " ";
     titleData.current.value = "";
     bodyData.current.value = "";
     reactionData.current.value = "";
     tagData.current.value = "";
-  }
+
+    fetch("https://dummyjson.com/posts/add", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        userId: userId,
+        title: postTitle,
+        body: postBody,
+        reactions: reactions,
+        tags: tags,
+      }),
+    })
+      .then((res) => res.json())
+      .then(post => addPost(post));
+
+  };
 
   return (
     <form className="create-post" onSubmit={handleSubmit}>
       <div className="mb-3">
         <label htmlFor="userId" className="form-label">
-        User Id
+          User Id
         </label>
         <input
           type="text"
@@ -97,7 +111,7 @@ function CreatePost() {
           required
         />
       </div>
-      
+
       <button type="submit" className="btn btn-primary">
         Post
       </button>
@@ -105,4 +119,4 @@ function CreatePost() {
   );
 }
 
-export default CreatePost
+export default CreatePost;

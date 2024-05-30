@@ -22,12 +22,8 @@ function App() {
     <Sidebar selectedTab={selectedTab} setSelectedTab={setSelectedTab}></Sidebar>
       <div className="content">
       <Header></Header>
-      
-      {/* {selectedTab === "HomePage" ? <HomePage></HomePage>: <PostList></PostList>}
-      {selectedTab === "Post List" ? <PostList></PostList> : <CreatePost></CreatePost>} */}
       {selectedTab === "Home" ? <HomePage></HomePage>: selectedTab === "Post List" ? <PostList></PostList> : <CreatePost></CreatePost>}
-
-      <Footer></Footer>
+    <Footer></Footer>
       </div>
     </div>
     </PostListProvider>

@@ -1,4 +1,4 @@
-// import React from 'react'
+import React from 'react'
 import { TbHttpDelete } from "react-icons/tb";
 import { AiOutlineLike } from "react-icons/ai";
 import { useContext } from "react";
@@ -37,7 +37,7 @@ function Post({ post }) {
         Total reaction in this post       
             <span className="badge text-bg-success reaction">
               <AiOutlineLike />
-              {post.reactions}
+              {post.reactions.likes}
             </span>
         </div>
         </div>
