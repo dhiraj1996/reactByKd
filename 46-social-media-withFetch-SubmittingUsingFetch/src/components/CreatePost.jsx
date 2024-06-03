@@ -27,7 +27,7 @@ function CreatePost() {
     bodyData.current.value = "";
     reactionData.current.value = "";
     tagData.current.value = "";
-
+    console.log("fetch started");
     fetch("https://dummyjson.com/posts/add", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
