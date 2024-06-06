@@ -1,5 +1,7 @@
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
+import { counterActions } from "../store/counter";
+import { privacyActions } from "../store/privacy";
 
 
 const Controls = ()=> {
@@ -8,29 +10,33 @@ const Controls = ()=> {
     const inputElement = useRef();
 
     const handleIncrement = () => {
-        dispatch({type: "INCREMENT"});
+        // dispatch({type: "INCREMENT"});
+        dispatch(counterActions.increment())
     }
 
     const handleDecrement = () => {
-        dispatch({type: "DECREMENT"});
+        // dispatch({type: "DECREMENT"});
+        dispatch(counterActions.decrement());
     }
 
     const handleAddition = () => {
-        dispatch({type: "ADD", payload: {
-            data: inputElement.current.value,
-        }});
+        dispatch(counterActions.add({data: inputElement.current.value}));
+
+        // dispatch(counterActions.add(inputElement.current.value))
+        //Or we can write like above and pass action.payload in store
+        //Below in Subtract i wrote like this.
+
         inputElement.current.value = "";
     }
 
     const handleSubtraction = () => {
-        dispatch({type: "SUB", payload:{
-            data:inputElement.current.value,
-        }});
+        //We can directly pass the payload.
+        dispatch(counterActions.subtract(inputElement.current.value));
         inputElement.current.value = "";
     }
 
     const handlePrivacy = ()=> {
-        dispatch({type: "PRIVACY_TOGGLE"});
+        dispatch(privacyActions.toggle());
     }
     return (
         <>
