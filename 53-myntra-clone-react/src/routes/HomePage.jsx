@@ -1,15 +1,12 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import HomeItem from "./components/HomeItem";
+import HomeItem from "../components/HomeItem"
 
-
-function App() {
-  let item = 
+function HomePage() {
+    let items = 
     {
       id: '001',
       image: 'images/1.jpg',
       company: 'Carlton London',
-      item_name: 'Rhodium-Plmmated CZ Floral Studs',
+      item_name: 'Rhodium-Plated CZ Floral Studs',
       original_price: 1045,
       current_price: 606,
       discount_percentage: 42,
@@ -20,20 +17,16 @@ function App() {
           count: 1400,
       },
     }
-
   return (
-    
     <>
-      <Header></Header>
-      <main>
+    <main>
         <div className="items-container">
-        <HomeItem item={item}> </HomeItem >
+        <HomeItem item={items}> </HomeItem >
         </div>
         
       </main>
-      <Footer></Footer>
     </>
-  );
+  )
 }
 
-export default App;
+export default HomePage

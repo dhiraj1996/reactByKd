@@ -1,4 +1,4 @@
-const items = [
+export const INITIAL_ITEMS = [
     {
         id: '001',
         image: 'images/1.jpg',
