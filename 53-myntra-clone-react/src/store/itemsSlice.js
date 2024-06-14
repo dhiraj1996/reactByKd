@@ -1,5 +1,5 @@
 import { createSlice} from "@reduxjs/toolkit"
-import INITIAL_ITEMS from "../data/items"
+import { INITIAL_ITEMS } from "../data/items"
 
 const itemsSlice = createSlice({
     name: "items",
@@ -11,7 +11,7 @@ const itemsSlice = createSlice({
     }
 })
 
-export const itemsAction = itemsSlice.actions;
+export const itemsActions = itemsSlice.actions;
 
 
 export default itemsSlice;

@@ -4,7 +4,7 @@ import itemsSlice from "./itemsSlice";
 
 const myntraStore = configureStore({
     reducer: {
-        items: {name: itemsSlice.reducer}
+        items: itemsSlice.reducer
     }
     
 })
