@@ -2,10 +2,14 @@ import { IoMdPersonAdd } from "react-icons/io";
 import { LuHeartHandshake } from "react-icons/lu";
 import { BsBagCheck } from "react-icons/bs";
 import { Link } from "react-router-dom";
-
+import { useSelector } from "react-redux";
 
 
 function Header() {
+
+  const bagCount = useSelector(store => store.bag)
+  // console.log("Item in bag" , bagCount)
+
   return (
     <>
     <header>
@@ -54,7 +58,7 @@ function Header() {
             </span> */}
             <BsBagCheck />
              <span className="action_name">Bag</span>
-            <span className="bag-item-count">0</span>
+            <span className="bag-item-count">{bagCount.length}</span>
           </Link>
         </div>
       </header>
