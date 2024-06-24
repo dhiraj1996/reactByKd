@@ -52,7 +52,7 @@ function CreatePost() {
     <form className="create-post" onSubmit={handleSubmit}>
       <div className="mb-3">
         <label htmlFor="userId" className="form-label">
-          User Id
+          User Id (1-12)
         </label>
         <input
           type="text"

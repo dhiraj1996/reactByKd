@@ -1,4 +1,8 @@
-
+#root {
+    background-color: rgb(172, 146, 231);
+    height: 100vh;
+    color: white;
+}
 h1 {
     font-size: 40px;
     font-weight: 700;
@@ -8,6 +12,10 @@ h1 {
 
 input {
     width: 100%;
+    border-radius: 16px;
+    border: none;
+    outline: none;
+    padding: 16px;
 }
 
 .dj-row {
