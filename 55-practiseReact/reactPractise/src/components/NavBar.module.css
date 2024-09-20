@@ -1,0 +1,33 @@
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(199, 52, 15, 0.541);
+    padding: 16px;
+}
+
+ul{
+    display: flex;
+    /* align-items: center; */
+    text-align: center;
+    gap: 80px;
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+    text-decoration: none;
+}
+
+/* a.active {
+    color: green;
+} */
+
+.list-item {
+    text-decoration: none;
+    color: white;
+}
+.active-link{
+    color: rgb(40, 7, 94);
+}
